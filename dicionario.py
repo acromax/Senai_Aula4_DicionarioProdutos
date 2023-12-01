@@ -16,12 +16,15 @@ if disponivelProduto.upper() == 'S':
 else:
     disponibilidade = False
 
-# Dicionário com os valores inseridos pelo usuário
+# Processamento e dicionário com os valores inseridos pelo usuário
 dados_produto = {'nome': nomeProduto, 'quantidade': quantidadeProduto, 'preço': valorProduto, "disponibilidade": disponibilidade}
+
+preco_total = dados_produto['quantidade'] * dados_produto['preço']
 
 # Saída
 print('\nCadastrado efetuado com sucesso',
-      '\nProduto: ', (dados_produto['nome']),
-      '\nQuantidade: ', (dados_produto['quantidade']),
-      '\nPreço: R$ ', (dados_produto['preço']),
-      '\nDisponível: ', (dados_produto['disponibilidade']))
+      '\nProduto: ', dados_produto['nome'],
+      '\nQuantidade: ', dados_produto['quantidade'],
+      '\nPreço: R$ ', dados_produto['preço'],
+      '\nDisponível: ', dados_produto['disponibilidade'],
+      '\nPreço Total: R$ ', preco_total)
